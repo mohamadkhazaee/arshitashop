@@ -1,0 +1,17 @@
+{
+  "name": "arshitakala",
+  "version": "1.0.0",
+  "description": "a woocommerce website for arshita web",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w assets/scss/ -o assets/css/ --recursive"
+  },
+  "keywords": [
+    "shop"
+  ],
+  "author": "mohamad khazaee",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
