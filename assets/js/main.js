@@ -29,4 +29,21 @@ $(window).scroll(function(event){
    }
    lastScrollTop = st;
 });
+
+//responsive main nav
+
+$(".main-nav-toggle").click(()=>{
+    $('#main-nav').toggleClass('show-main-nav')
+    $('.responsive-overlay').toggleClass('responsive-overlay-show')
+})
+
+$(".close-btn-res-menu").click(()=>{
+    $('#main-nav').toggleClass('show-main-nav')
+    $('.responsive-overlay').toggleClass('responsive-overlay-show')
+})
+
+$(".responsive-overlay").click(()=>{
+    $('#main-nav').toggleClass('show-main-nav')
+    $('.responsive-overlay').toggleClass('responsive-overlay-show')
+})
 })
