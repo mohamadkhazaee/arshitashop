@@ -1,4 +1,7 @@
 $('.document').ready(function(){
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
     //get user device width:
 
     let deviceWidth = window.innerWidth;

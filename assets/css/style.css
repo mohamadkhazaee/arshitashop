@@ -265,7 +265,7 @@ input[type=number] {
     box-shadow: 0 10px 6px -6px rgba(150, 150, 150, 0.5);
     top: 65px;
     right: 0;
-    z-index: 1000; }
+    z-index: 999; }
     #main-nav .main-menu {
       justify-content: flex-start;
       align-items: center;
@@ -626,13 +626,22 @@ input[type=number] {
       .loop-slider-type-1 .loop-slider-tabs .slider-loop-menu li a {
         display: block;
         padding: 7px 0;
+        padding-right: 20px;
         color: #fff;
         font-family: 'shabnam';
         font-weight: bold;
         font-size: 16px;
-        transition: all ease-in-out .3s; }
+        transition: all ease-in-out .3s;
+        position: relative; }
         .loop-slider-type-1 .loop-slider-tabs .slider-loop-menu li a:hover {
           color: #f64b3c; }
+        .loop-slider-type-1 .loop-slider-tabs .slider-loop-menu li a::after {
+          content: '\F0496';
+          position: absolute;
+          right: 0;
+          top: 5px;
+          font-family: 'Material Icons';
+          transform: rotate(180deg); }
     .loop-slider-type-1 .loop-slider-tabs .see-more {
       width: 140px;
       height: 45px;
@@ -669,25 +678,158 @@ input[type=number] {
       width: 100%; }
       .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 {
         background-color: transparent;
-        height: 100%; }
+        height: 100%;
+        padding-bottom: 10px; }
+        .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .owl-stage-outer {
+          padding-bottom: 10px !important; }
         .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item {
-          overflow: hidden;
           display: flex;
           justify-content: center;
           align-items: flex-start; }
           .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item {
+            background-color: #fff;
             max-width: 200px;
             border-radius: 10px;
             overflow: hidden;
             width: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-start; }
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            -webkit-box-shadow: 0 2px 12px -5px #000;
+            -moz-box-shadow: 0 2px 12px -5px #000;
+            box-shadow: 0 2px 12px -5px #000;
+            transition: all ease-in-out .25s; }
+            .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item:hover {
+              box-shadow: 2px 5px 15px -4px #000; }
+            .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-off {
+              position: absolute;
+              top: 10px;
+              right: -30px;
+              width: 100px;
+              height: 30px;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-family: "IRsans";
+              font-weight: bold;
+              background-color: #f64b3c;
+              transform: rotate(45deg);
+              z-index: 100; }
             .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top {
-              width: 100%; }
+              width: 100%;
+              position: relative;
+              padding-top: 10px;
+              overflow: hidden; }
+              .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top:hover .product-overlay {
+                transform: translateY(0); }
+              .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top .product-overlay {
+                width: 100%;
+                transform: translateY(-100%);
+                height: 100%;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                z-index: 101;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all ease-in-out .3s; }
+                .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top .product-overlay a {
+                  display: flex;
+                  width: 50px;
+                  height: 50px;
+                  justify-content: center;
+                  align-items: center; }
+                  .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top .product-overlay a i {
+                    font-size: 30px;
+                    color: #fff;
+                    transition: all ease-in-out .2s; }
+                  .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top .product-overlay a:hover i {
+                    color: #f64b3c; }
               .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-top img {
                 width: 100%;
                 max-width: 200px; }
+            .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 20px 5px; }
+              .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .product-title {
+                font-family: "shabnam";
+                color: #555;
+                font-size: 13px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 100%;
+                min-height: 30px; }
+              .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .price {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .price .before {
+                  color: #76787A;
+                  font-size: 11px;
+                  font-family: 'IRsans';
+                  margin-left: 5px; }
+                .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .price .after {
+                  color: #333;
+                  margin-right: 5px;
+                  font-weight: bold;
+                  font-size: 13px;
+                  font-family: 'IRsans'; }
+              .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .product-details-btn {
+                margin-top: 10px;
+                background-color: #f64b3c;
+                color: #fff;
+                font-family: "shabnam";
+                font-size: 12px;
+                width: 100px;
+                border-radius: 10px;
+                height: 35px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                box-sizing: border-box !important;
+                transition: all ease-in-out .3s; }
+                .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .product-details-btn:hover {
+                  border: 1px solid #f64b3c;
+                  color: #f64b3c;
+                  background-color: #fff; }
+                  .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .product-details-btn:hover::after {
+                    color: #f64b3c;
+                    top: 8px; }
+                .loop-slider-type-1 .tab-content .tab-pane .owl-loop-slider-type-1 .item .product-item .product-body .product-details-btn::after {
+                  content: '\F0141';
+                  font-family: "Material Icons";
+                  color: #fff;
+                  position: absolute;
+                  top: 8.5px;
+                  left: 20px;
+                  transition: all ease-in-out 0s; }
+
+@media screen and (max-width: 991px) {
+  .loop-slider-type-1 .owl-loop-slider-type-1 .product-top .product-overlay {
+    position: static !important;
+    height: 40px;
+    transform: translateY(0) !important;
+    background-color: #fff !important; }
+    .loop-slider-type-1 .owl-loop-slider-type-1 .product-top .product-overlay i {
+      color: #f64b3c !important; }
+  .loop-slider-type-1 .owl-loop-slider-type-1 .product-body {
+    padding-top: 0 !important; } }
 
 @media screen and (max-width: 991px) {
   .responsive-overlay {
