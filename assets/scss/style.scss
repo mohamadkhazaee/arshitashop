@@ -2,9 +2,11 @@
 @import 'variables.scss';
 @import 'header.scss'; 
 @import 'mainNav.scss';   
+@import 'slider.scss';
+@import 'loop-sliders.scss';
 @media screen and(max-width:991px){
     .responsive-overlay{
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,.5);
@@ -21,3 +23,10 @@
 .container-fluid{
     max-width: 1600px !important;
 }
+.c-red{
+    color: $pred !important;
+}
+main{
+    background-color: #f8f8f8;
+    padding-top: 150px;
+} 

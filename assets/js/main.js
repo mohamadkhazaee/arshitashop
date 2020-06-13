@@ -23,9 +23,10 @@ $(window).scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
     $('#main-nav').addClass("hide-main-nav")
-    
+    $('.main-header').addClass('main-header-shadow')
    } else {
     $('#main-nav').removeClass("hide-main-nav")
+    $('.main-header').removeClass('main-header-shadow')
    }
    lastScrollTop = st;
 });
@@ -46,4 +47,68 @@ $(".responsive-overlay").click(()=>{
     $('#main-nav').toggleClass('show-main-nav')
     $('.responsive-overlay').toggleClass('responsive-overlay-show')
 })
+
+$('.main-menu > li > a').click(function(){
+    if(deviceWidth <= 992){
+        $(this).parent().find('>ul').toggleClass('d-block')
+        $(this).toggleClass('c-red')
+    }
 })
+$('.main-menu > li > ul > li > a').click(function(){
+    if(deviceWidth <= 992){
+        $(this).toggleClass('c-red')
+        $(this).parent().find('>ul').toggleClass('d-block')
+    }
+})
+
+
+
+//////////// owls
+
+$('.owl-main-slider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    rtl:true,
+
+    responsive:{
+        0:{
+            items:1
+        },
+        
+    }
+})
+$('.owl-loop-slider-type-1').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    rtl:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        450:{
+            items:2
+        },
+        650:{
+            items:3
+        },
+        900:{
+            items:2
+        },
+        768:{
+            items:1
+        },
+        992:{
+            items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+})
+
+
+

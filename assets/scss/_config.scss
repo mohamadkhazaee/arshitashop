@@ -82,6 +82,13 @@
 
      ;
   }
+  @font-face {
+    font-family: 'aviny';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/aviny.ttf') format('truetype')
+     ;
+  }
 *{
     outline: none !important;
 }

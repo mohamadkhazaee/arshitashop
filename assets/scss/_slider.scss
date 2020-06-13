@@ -1,0 +1,101 @@
+#slider-section{
+    .slider-ad{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a{
+            display: block;
+            width: 100%;
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+                height: 180px;
+                border-radius: $radius;
+            }
+        }
+    }
+    .owl-container{
+        width: 100%;
+        .owl-main-slider{
+            width: 100%;
+            margin-bottom: 10px;
+            .item{
+                a{
+                    img{
+                        height: 380px;
+                        border-radius: $radius;
+                    }
+                }
+            }
+        }
+        .owl-dots{
+            position: absolute;
+            bottom: 20px;
+            /* margin-right: auto; */
+            /* margin-left: auto; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .owl-nav{
+            position: absolute;
+            top: 175px;
+            height: 30px;
+            margin-top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        padding: 5px;
+        button{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background-color: transparent !important;
+            }
+            span{
+                font-size: 50px;
+                color: #fff;
+            }
+        }
+        }
+    }
+}
+@media screen and(max-width:991px){
+    #slider-section{
+        .slider-ad{
+            a{
+                img{
+                    height: 150px;
+                    margin-bottom: 10px ;
+                }
+            }
+        }
+        .owl-container{
+            .owl-main-slider{
+                .owl-nav{
+                    display: none !important;
+                }
+                .owl-dots{
+                    bottom: 3px;
+                }
+                .item{
+                    a{
+                        img{
+                            height: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-tabs{
+    border: 0 !important;
+}

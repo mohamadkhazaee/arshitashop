@@ -30,8 +30,9 @@
     #main-nav{
       -webkit-box-shadow: 0 10px 6px -6px rgba(150,150,150,.5);
       box-shadow: 0 10px 6px -6px rgba(150,150,150,.5);
-      margin-top: 65px;
-
+      top: 65px;
+      right: 0;
+      z-index: 1000;
        //@extend// -moz-box-shadow: 0 10px 6px -6px #777;
            //  box-shadow: 0 10px 6px -6px #777;
       .main-menu{
@@ -40,6 +41,7 @@
         height: 50px;
         position: relative;
         width: 100%;
+        
          >li{
            justify-content: center;
            align-items: center;
@@ -93,7 +95,7 @@
 
          }
           >ul{
-            display: flex;
+            display: none;
             flex-direction: column;
             z-index: 100;
             position: absolute;
@@ -165,11 +167,11 @@
                   
                 }
               }
-              ul{
-                display: flex;
+              >ul{
+                display: none;
                 position: absolute;
                 width: auto;
-                min-width: 1000px;
+                width: 1000px;
                 height: 100%;
                 background-color: #f4f4f4;
                 left: -1000px;
@@ -178,8 +180,29 @@
                 padding:10px;
                 border: $border;
                 border-top: 0;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                .menu-item-has-children{
+                  >a{
+                    &::after{
+                      position: absolute; 
+                      content: '\F0140';
+                      left: -25px;
+                      top: -5px;
+                      font-size: 22px;
+                      color: #666;
+                      font-family: 'Material Icons';
+                      
+                    }
+                  }
+                }
                 >li{
-                  width: 200px;
+                  width: 195px;
+                  display: block;
+                  height: auto;
                   >a{
                     width: auto;
                     font-family: "IRsans";
@@ -187,23 +210,33 @@
                     color: #333;
                     font-size: 13px;
                     position: relative;
-                    
+                    transition: all ease-in-out .3s;
+                    margin-bottom: 5px;
+                    &:hover{
+                      color:$pred;
+                    }
+                    &:hover::after{
+                      color: $pred;
+                    }
+                  
                   }
-                }
-                .menu-item-has-children{
-                  >a{
-                    position: relative;
-                    &::after{
-                      position: absolute;
-                      content: '\F0140';
-                      left: -25px;
-                      top: -5px;
-                      font-size: 22px;
-                      color: #666;
-                      font-family: 'Material Icons';
+                  >ul{
+                    width: 100%;
+                    >li{
+                      margin-bottom: 5px;
+                      >a{
+                        color: #555;
+                        font-family: 'shabnam';
+                        font-size: 13px;
+                        transition: all ease-in-out .3s;
+                        &:hover{
+                          color:$pred;
+                        }
+                      }
                     }
                   }
                 }
+               
               }
             }
           }
@@ -242,7 +275,8 @@
       right: 0 !important;
     }
     #main-nav{
-      position: absolute;
+      position: fixed;
+      overflow-y: scroll;
       height: 100vh;
       top: 0;
       right: -100%;
@@ -251,7 +285,7 @@
       flex-direction: column;
       .close-btn-res-menu{
         display: flex;
-        width: 30px;
+        width: 30px; 
         height: 30px;
         margin-top: 20px;
         i{
@@ -275,21 +309,86 @@
        flex-direction: column;
        >li{
          width: 100%;
-         height: 40px;
+         min-height: 40px;
+         height: auto;
          border-bottom: $border;
+         flex-direction: column;
          >a{
            display: flex;
            justify-content: flex-start;
            align-items: center;
+           height: 40px
          }
          >ul{
+           position: relative;
+           display: none ;
+           padding-right: 8px;
+           > .menu-item-has-children{
+            >a{
+              &::after{
+                font-family: 'Material Icons';
+                content: "\F0140";
+                position: absolute;
+                left: 10px;
+                font-size: 20px;
+                
+              }
+            }
+          }
            >li{
+             min-height: 30px;
+             >a{
+               display: block;
+               height: 30px;
+               color: #333 ;
+                font-family: 'shabnam' ;
+                font-size: 13px;
+             }
              .mega-menu-icon{
                display: none;
+             }
+             >ul{
+              display: none ;
+               position: relative;
+              padding-right: 8px;
+               >li{
+                 min-height: 30px;
+                 >a{
+                  height: 30px;
+                  color: #333 ;
+                   font-family: 'shabnam' !important;
+                   font-size: 13px;
+                   display: block;
+                 }
+                 >ul{
+                  display: none;
+                   >li{
+                     >a{
+                      height: 30px;
+                      color: #333 ;
+                       font-family: 'shabnam' !important;
+                       font-size: 13px;
+                       display: block;
+                     }
+                   }
+                 }
+               }
              }
            }
          }
        }
+      > .menu-item-has-children{
+        >a{
+          &::after{
+            font-family: 'Material Icons';
+            content: "\F0140";
+            position: absolute;
+            left: 10px;
+            font-size: 20px;
+            
+          }
+        }
+      }
       }
     }
   }
