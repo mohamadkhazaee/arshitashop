@@ -1,0 +1,36 @@
+.ad-rows{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .ad-full{
+        width: 100%;
+        border-radius: $radius;
+        overflow: hidden;
+
+        img{
+            border-radius: $radius;
+            width: 100%;
+            min-height: 150px;
+            width: 100%;
+        }
+    }
+    .ad-half{
+        width: 100%;
+        border-radius: $radius;
+        overflow: hidden;
+        img{
+            border-radius: $radius;
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+    .ad-4{
+        width: 100%;
+        border-radius: $radius;
+        img{
+            border-radius: $radius;
+            width: 100%;
+        min-height: 150px;
+        }
+    }
+}

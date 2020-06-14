@@ -84,7 +84,10 @@ $('.owl-main-slider').owlCarousel({
 $('.owl-loop-slider-type-1').owlCarousel({
     loop:true,
     margin:10,
-    nav:false,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:2500,
+    autoplayHoverPause:true,
     rtl:true,
     dots:false,
     responsive:{
@@ -111,6 +114,68 @@ $('.owl-loop-slider-type-1').owlCarousel({
         }
     }
 })
+$('.owl-loop-slider-type-2').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    autoplayTimeout:2500,    
+    autoplay:true,
+    autoplayHoverPause:true,
+    rtl:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        450:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        800:{
+            items:4
+        },
+        1000:{
+            items:6
+        },
+        1400:{
+            items:8
+        }
+    }
+})
+
+$('.owl-loop-slider-categories').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    autoplayTimeout:2500,
+    autoplayHoverPause:true,
+    autoplay:true,
+    rtl:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        450:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        800:{
+            items:4
+        },
+        1000:{
+            items:6
+        },
+        1400:{
+            items:8
+        }
+    }
+})
+
+
 })
 
 
