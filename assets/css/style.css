@@ -1692,6 +1692,8 @@ input[type=number] {
                 justify-content: flex-start;
                 align-items: center;
                 color: #666;
+                height: 100%;
+                width: 50%;
                 font-size: 12px; }
                 .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-author i {
                   width: 20px;
@@ -1703,7 +1705,9 @@ input[type=number] {
               .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-date {
                 display: flex;
                 justify-content: flex-start;
-                align-items: center; }
+                align-items: center;
+                width: 50%;
+                height: 100%; }
                 .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-date i {
                   width: 20px;
                   height: 20px;
@@ -1746,6 +1750,36 @@ input[type=number] {
       margin-bottom: 20px;
       max-height: 200px; }
 
+footer {
+  background-color: #f0f0f0; }
+  footer .footer-ul {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    footer .footer-ul ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0 !important; }
+      footer .footer-ul ul .footer-ul-header {
+        font-family: 'shabnam';
+        font-weight: bold;
+        color: #555;
+        font-size: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center !important; }
+      footer .footer-ul ul li a {
+        font-family: 'IRsans';
+        font-size: 13px;
+        color: #444;
+        transition: all ease-in-out .3s; }
+        footer .footer-ul ul li a:hover {
+          color: #f64b3c; }
+
 @media screen and (max-width: 991px) {
   .responsive-overlay {
     position: fixed;
@@ -1768,3 +1802,50 @@ input[type=number] {
 main {
   background-color: #f8f8f8;
   padding-top: 150px; }
+
+#footer-backTo-top {
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; }
+  #footer-backTo-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #footer-backTo-top a i {
+      color: #f64b3c;
+      font-size: 35px; }
+    #footer-backTo-top a span {
+      color: #777;
+      font-size: 15px;
+      font-family: 'shabnam';
+      font-weight: bold;
+      transition: all ease-in-out .3s; }
+      #footer-backTo-top a span:hover {
+        color: #f64b3c; }
+
+.website-services {
+  border-top: 1px solid #ccc;
+  background-color: #f3f3f3; }
+  .website-services .service-wrapper {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .website-services .service-wrapper svg, .website-services .service-wrapper img {
+      width: 100px;
+      height: 100px; }
+    .website-services .service-wrapper h4 {
+      font-family: "shabnam";
+      font-size: 13px;
+      font-weight: bold;
+      color: #666;
+      display: block;
+      width: 120px;
+      text-align: center !important;
+      margin-top: 10px; }

@@ -1499,13 +1499,15 @@
                             justify-content: flex-start;
                             align-items: center;
                             color: #666;
+                            height: 100%;
+                            width: 50%;
                             font-size: 12px;
                             i{
                                 width:20px;
                                 height:20px;
                                 font-size: 20px;
-                                color: $lightc;
-                                margin-left: 10px;
+                                color: $lightc; 
+                                margin-left: 10px; 
                                 margin-top: -10px;
                             }
                            
@@ -1514,6 +1516,8 @@
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
+                            width: 50%;
+                            height: 100%;
                             i{
                                 width:20px;
                                 height:20px;

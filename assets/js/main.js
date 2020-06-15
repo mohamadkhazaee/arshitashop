@@ -237,6 +237,16 @@ $('.owl-loop-slider-type3-brands').owlCarousel({
     }
 })
 
+
+
+
+$('#back-top-btn').on('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({
+        scrollTop: 0
+    }, 700);
+});
+
 })
 
 

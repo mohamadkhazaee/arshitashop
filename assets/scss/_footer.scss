@@ -1,0 +1,38 @@
+footer{
+    background-color: #f0f0f0;
+    .footer-ul{
+        margin: 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        
+            .footer-ul-header{
+                font-family: 'shabnam';
+                font-weight: bold;
+                color: #555;
+                font-size: 15px;
+                margin-bottom: 10px;
+                width: 100%;
+                text-align: center !important;
+            }
+            padding: 0 !important;
+            li{
+                a{
+                    font-family: 'IRsans';
+                    font-size: 13px;
+                    color: #444;
+                    transition: all ease-in-out .3s;
+                    &:hover{
+                        color: $pred;
+                    }
+                }
+            }
+        }
+    }
+}
