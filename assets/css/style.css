@@ -1622,7 +1622,7 @@ input[type=number] {
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        top: 1000px;
+        top: 100px;
         display: none;
         padding: 0 10px; }
         .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .owl-nav button {
@@ -1674,12 +1674,46 @@ input[type=number] {
               color: #333;
               display: flex;
               width: 100%;
-              height: 50px;
+              height: 40px;
               overflow: hidden;
               line-height: 20px;
               font-size: 14px;
-              margin-top: 15px;
-              margin-bottom: 15px; }
+              margin-top: 10px;
+              margin-bottom: 10px; }
+            .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details {
+              width: 100%;
+              height: auto;
+              justify-content: space-between;
+              align-items: center;
+              flex-direction: row;
+              font-family: 'IRsans' !important; }
+              .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-author {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #666;
+                font-size: 12px; }
+                .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-author i {
+                  width: 20px;
+                  height: 20px;
+                  font-size: 20px;
+                  color: #76787A;
+                  margin-left: 10px;
+                  margin-top: -10px; }
+              .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-date {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center; }
+                .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-date i {
+                  width: 20px;
+                  height: 20px;
+                  font-size: 20px;
+                  color: #76787A;
+                  margin-left: 10px;
+                  margin-top: -10px; }
+                .loop-slider-blog .loop-container .owl-container .owl-loop-slider-brands .item .blog-item .item-body .item-details .item-date span {
+                  color: #666;
+                  font-size: 12px; }
 
 .ad-rows {
   width: 100%; }
