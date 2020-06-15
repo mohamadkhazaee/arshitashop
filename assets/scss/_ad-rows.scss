@@ -1,7 +1,5 @@
 .ad-rows{
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
     .ad-full{
         width: 100%;
         border-radius: $radius;
@@ -12,6 +10,8 @@
             width: 100%;
             min-height: 150px;
             width: 100%;
+            margin-bottom: 20px;
+
         }
     }
     .ad-half{
@@ -22,6 +22,8 @@
             border-radius: $radius;
             width: 100%;
             min-height: 150px;
+            margin-bottom: 20px;
+
         }
     }
     .ad-4{
@@ -31,6 +33,9 @@
             border-radius: $radius;
             width: 100%;
         min-height: 150px;
+        margin-bottom: 20px;
+        max-height: 200px;
+
         }
     }
 }

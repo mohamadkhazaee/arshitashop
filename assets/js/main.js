@@ -90,28 +90,45 @@ $('.owl-loop-slider-type-1').owlCarousel({
     autoplayHoverPause:true,
     rtl:true,
     dots:false,
+    // responsive:{
+    //     0:{
+    //         items:1
+    //     },
+    //     450:{
+    //         items:2
+    //     },
+    //     650:{
+    //         items:1
+    //     },
+    //     900:{
+    //         items:2
+    //     },
+    //     768:{
+    //         items:1
+    //     },
+    //     992:{
+    //         items:4
+    //     },
+    //     1000:{
+    //         items:5
+    //     }
+    // }
     responsive:{
         0:{
             items:1
         },
-        450:{
+        560:{
             items:2
-        },
-        650:{
-            items:3
-        },
-        900:{
-            items:2
-        },
-        768:{
-            items:1
         },
         992:{
+            items:3
+        },
+        1100:{
             items:4
         },
-        1000:{
+        1400:{
             items:5
-        }
+        },
     }
 })
 $('.owl-loop-slider-type-2').owlCarousel({
@@ -141,6 +158,34 @@ $('.owl-loop-slider-type-2').owlCarousel({
         1400:{
             items:8
         }
+    }
+})
+$('.owl-loop-slider-brands').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
+    autoplayTimeout:2500,    
+    autoplay:true,
+    dots:false,
+    autoplayHoverPause:true,
+    rtl:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        450:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        800:{
+            items:4
+        },
+        1000:{
+            items:5
+        },
+        
     }
 })
 
@@ -175,6 +220,22 @@ $('.owl-loop-slider-categories').owlCarousel({
     }
 })
 
+
+$('.owl-loop-slider-type3-brands').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    autoplayTimeout:2500,
+    autoplayHoverPause:true,
+    autoplay:true,
+    rtl:true,
+    dots:true,
+    responsive:{
+        0:{
+            items:3
+        }
+    }
+})
 
 })
 
