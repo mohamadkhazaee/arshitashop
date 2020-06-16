@@ -1,5 +1,6 @@
 footer{
     background-color: #f0f0f0;
+    border-top:$border;
     .footer-ul{
         margin: 20px 0;
         display: flex;
@@ -34,5 +35,121 @@ footer{
                 }
             }
         }
+    }
+    .footer-socials{
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        flex-direction: column;
+        .footer-social-header{
+            font-family: 'shabnam';
+                font-weight: bold;
+                color: #555;
+                font-size: 15px;
+                width: 100%;
+                text-align: center !important;
+        }
+        form{
+            width: 100% !important;
+            margin: 10px 0;
+
+            .footer-form-container{
+                width: 100%;
+                height: 40px;
+                background-color: #fff;
+                border: $border;
+                border-radius: $radius;
+                overflow: hidden;
+            position: relative;
+            input{
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: 0 !important;
+                text-align: center !important;
+            }
+            button{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 60px;
+                background-color: $pred;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            }
+        }
+        .social-icons{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                color: #777;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i{
+                    font-size: 28px;
+                    
+                }
+            }
+        }
+    }
+    .footer-about{
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 15px;
+        .footer-about-header{
+            width: 100%;
+            font-family: "shabnam";
+            font-weight: bold;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer-about-content{
+            font-family: "IRsans";
+            color: #333;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify !important;
+            width: 100%;
+        }
+    }
+    .footer-enamad{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: $radius;
+        }
+    }
+    .copyright{
+        width: 100%;
+        font-family: "shabnam";
+        font-size: 11px;
+        color: $lightc;
+        text-align: center;
+        border-top: $border;
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
